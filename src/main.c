@@ -6,11 +6,27 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 18:17:25 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/06/14 19:34:40 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/14 20:06:33 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+t_list	*ft_lstnew(void *content);
+void	initStack(t_list *stack_a, int argc, char **argv)
+{
+	int	data;
+	while (argc != 0)
+	{
+		data = ft_atoi(argv[argc--]);
+		stack_a = ft_lstnew(&data);
+	}
+}
+
+void	sort_stack(stack_a, stack_b)
+{
+
+}
 
 int	main(int argc, char **argv)
 {
@@ -21,7 +37,7 @@ int	main(int argc, char **argv)
 	if (argc < 2)
 		return (1);
 	
-	ft_check_args(argc, argv);
+	ft_check_args(argc, argv); //void?
 
 	stack_a = (t_list **)malloc(sizeof(t_list));
 	if (!stack_a)
