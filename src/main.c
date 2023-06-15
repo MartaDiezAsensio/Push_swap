@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 18:17:25 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/06/14 20:06:33 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/15 18:46:39 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,3 +70,13 @@ int	main(int argc, char **argv)
 
 	return (0);
 }
+
+
+// int	main(int argc, char **argv)
+// {
+// 	t_list	**stack_a;
+
+// 	stack_a = create_stack(argc, argv, stack_a);
+	
+// 	print_list(*stack_a);
+// }
