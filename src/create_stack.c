@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 18:41:15 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/06/15 20:43:32 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/15 20:59:59 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,22 +37,14 @@ void	insert_node(t_list	**top, int value, int index)
 	*top = new;
 }
 
-t_list	**create_stack(int argc, char **argv, t_list **stack)
+t_list	*create_stack(int argc, char **argv, t_list **stack)
 {
-	t_list	*stack_a;
 	int		index;
 
 	index = 0;
-	stack_a = (t_list *)malloc(sizeof(t_list));
-	if (!stack_a)
-		return (NULL);
-
-	stack_a = NULL;
-	stack = &stack_a;
-
 	while ((argc - 1) > 0)
-		insert_node(&stack_a, ft_atoi(argv[--argc]), index++);
+		insert_node(stack, ft_atoi(argv[--argc]), index++);
 	
-	return (stack);
+	return (*stack);
 }
 
