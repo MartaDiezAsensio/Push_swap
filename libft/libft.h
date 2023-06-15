@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 13:40:55 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/29 18:29:32 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/15 19:03:35 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}					t_list;
+}					s_list;
 
 int		ft_atoi(const char *str);
 void	*ft_bzero(void *s, size_t len);
@@ -58,14 +58,14 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int ch);
 int		ft_toupper(int ch);
-t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-int		ft_lstsize(t_list *lst);
-t_list	*ft_lstlast(t_list *lst);
-void	ft_lstadd_back(t_list **lst, t_list *new);
-void	ft_lstclear(t_list **lst, void (*del)(void *));
-void	ft_lstdelone(t_list *lst, void (*del)(void *));
-void	ft_lstiter(t_list *lst, void (*f)(void *));
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+s_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(s_list **lst, s_list *new);
+int		ft_lstsize(s_list *lst);
+s_list	*ft_lstlast(s_list *lst);
+void	ft_lstadd_back(s_list **lst, s_list *new);
+void	ft_lstclear(s_list **lst, void (*del)(void *));
+void	ft_lstdelone(s_list *lst, void (*del)(void *));
+void	ft_lstiter(s_list *lst, void (*f)(void *));
+s_list	*ft_lstmap(s_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif

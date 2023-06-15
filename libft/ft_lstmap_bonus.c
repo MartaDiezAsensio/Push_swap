@@ -6,17 +6,17 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 20:25:11 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/29 18:29:00 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/15 19:02:46 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+s_list	*ft_lstmap(s_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new;
-	t_list	*aux;
-	t_list	*tmp;
+	s_list	*new;
+	s_list	*aux;
+	s_list	*tmp;
 
 	if (!(lst))
 		return (NULL);

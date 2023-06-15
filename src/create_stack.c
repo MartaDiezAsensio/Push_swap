@@ -6,11 +6,11 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 18:41:15 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/06/15 18:48:41 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/15 20:43:32 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "pushswap.h"
 
 t_list	*new_node(int value, int index)
 {

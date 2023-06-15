@@ -6,11 +6,11 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 18:44:29 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/06/15 18:45:59 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/15 20:43:39 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "pushswap.h"
 
 void	print_list(t_list *stack)
 {

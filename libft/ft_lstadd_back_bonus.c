@@ -6,15 +6,15 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 19:45:20 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/05/29 18:25:57 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/15 19:02:34 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(s_list **lst, s_list *new)
 {
-	t_list	*aux;
+	s_list	*aux;
 
 	if (lst)
 	{

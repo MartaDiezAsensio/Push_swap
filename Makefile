@@ -6,12 +6,12 @@
 #    By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/14 18:00:56 by mdiez-as          #+#    #+#              #
-#    Updated: 2023/06/14 18:37:28 by mdiez-as         ###   ########.fr        #
+#    Updated: 2023/06/15 19:22:26 by mdiez-as         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 
-CHECK = 
+NAME = push_swap
+#CHECK = 
 
 #The wildcard function is used to expand the wildcard patterns src/* and utils/*
 #The result of the wildcard function will be a space-separed list of all the files
@@ -19,10 +19,10 @@ CHECK =
 #This list is then assigned to the SRCS variable.
 
 SRCS = $(wildcard src/*.c utils/*.c)
-CHECK_SRCS = $(wildcard utils/*.c) src/instructions.c checker.c
+#CHECK_SRCS = $(wildcard utils/*.c) src/instructions.c checker.c
 
 OBJS = ${SRCS:.c=.o}
-CHECK_OBJS = ${CHECK_SRCS:.c=.o}
+#CHECK_OBJS = ${CHECK_SRCS:.c=.o}
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -Iincludes
