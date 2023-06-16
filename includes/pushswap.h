@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/10 15:15:15 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/06/16 16:38:43 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/16 19:41:00 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,9 @@ t_list	*get_i_node(t_list	*stack, int target);
 int	ft_lstlen(t_list *lst);
 
 
-//Src Functions
+//Sort Functions
+void	radix_sort(t_list **stack_a, t_list **stack_b);
+int	get_max_value(t_list *stack_a);
 
 //Create stack
 t_list	*new_node(int value, int index);

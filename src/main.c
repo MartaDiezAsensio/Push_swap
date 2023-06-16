@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 18:17:25 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/06/16 16:38:52 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/16 19:41:19 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ int	main(int argc, char **argv)
 
 	printf("\n\n");
 
-	reverse_rotate_a(stack_a);
+	radix_sort(stack_a, stack_b);
 
 	print_list(*stack_a);
 	// printf("\n");
