@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 12:24:20 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/06/18 12:24:25 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/18 13:18:46 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,15 @@ void	stack_sort(t_list **stack_a, t_list **stack_b)
 		aux_a = aux_a->next;
 	}
 	sort_opt(min, stack_a, stack_b, lst_len);
+}
+
+int	is_sorted(t_list **stack_a)
+{
+	while ((*stack_a)->next)
+	{
+		if ((*stack_a)->data > (*stack_a)->next->data)
+			return (0);
+		(*stack_a) = (*stack_a)->next;
+	}
+	return (1);
 }

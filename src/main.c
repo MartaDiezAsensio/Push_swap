@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 18:17:25 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/06/18 12:38:44 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/18 13:18:42 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ int	main(int argc, char **argv)
 	if (argc < 2)
 		return (1);
 	
-	ft_check_args(argc, argv);
+	if (ft_check_args(argc, argv))
+		return (1);
 
 	stack_a = (t_list **)malloc(sizeof(t_list));
 	if (!stack_a)
@@ -33,6 +34,9 @@ int	main(int argc, char **argv)
 	*stack_b = NULL;
 
 	*stack_a = create_stack(argc, argv, stack_a);
+
+	if (is_sorted(stack_a))
+		return (0);
 
 	while (*stack_a)
 		stack_sort(stack_a, stack_b);
@@ -50,9 +54,5 @@ int	main(int argc, char **argv)
 		free_stack(stack_b);
 		return (0);
 	}
-
-	sort_stack(stack_a, stack_b);
-	free_stack(stack_a);
-	free_stack(stack_b);
 }
 

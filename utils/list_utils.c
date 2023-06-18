@@ -6,13 +6,12 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 18:44:29 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/06/18 12:41:33 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/18 13:18:50 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-//To get las node (i - 1) probably not necessary
 int	ft_lstlen(t_list *lst)
 {
 	int	i;
@@ -48,10 +47,35 @@ void	swap_stack(t_list **stack_a, t_list **stack_b, int lst_len)
 
 int	ft_check_args(int argc, char **argv)
 {
+	int	i;
 
+	if (argc == 1)
+		return (1);
+	else if (argc >= 2)
+	{
+		while (argc-- > 1)
+		{
+			i = 0;
+			while (argv[argc][i] != '\0')
+			{
+				if (!(argv[argc][i] >= '0' && argv[argc][i] <= '9'))
+				{
+					write(1, "Error\n", 6);
+					return (1);
+				}
+				i++;
+			}
+		}
+	}
+	return (0);
 }
 
 void	free_stack(t_list **stack_a)
 {
-
+	while (*stack_a)
+	{
+		free(*stack_a);
+		*stack_a = (*stack_a)->next;
+	}
+	free(stack_a);
 }
