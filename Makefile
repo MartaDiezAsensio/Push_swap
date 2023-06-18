@@ -6,19 +6,19 @@
 #    By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/14 18:00:56 by mdiez-as          #+#    #+#              #
-#    Updated: 2023/06/15 19:22:26 by mdiez-as         ###   ########.fr        #
+#    Updated: 2023/06/18 11:27:14 by mdiez-as         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
-#CHECK = 
+#CHECK = checker
 
 #The wildcard function is used to expand the wildcard patterns src/* and utils/*
 #The result of the wildcard function will be a space-separed list of all the files
 #that match the specified patterns.
 #This list is then assigned to the SRCS variable.
 
-SRCS = $(wildcard src/*.c utils/*.c)
+SRCS = $(wildcard src/*.c utils/*.c *.c)
 #CHECK_SRCS = $(wildcard utils/*.c) src/instructions.c checker.c
 
 OBJS = ${SRCS:.c=.o}

@@ -6,16 +6,17 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 18:10:53 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/06/16 16:39:00 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/18 12:13:53 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-void	swap_a(t_list	**stack_a)
+void	sa(t_list	**stack_a)
 {
 	t_list	*first;
 	t_list	*second;
+	int		aux;
 
 	if (*stack_a == NULL || (*stack_a)->next == NULL)
 		return ;
@@ -26,11 +27,13 @@ void	swap_a(t_list	**stack_a)
 	first->next = second->next;
 	second->next = first;
 	*stack_a = second;
+
+	aux = first->index;
+	first->index = second->index;
+	second->index = aux;
 }
 
-// void	swap_b(int a , int b);
-
-void	push_a(t_list	**stack_a , t_list	**stack_b)
+void	pa(t_list	**stack_a , t_list	**stack_b)
 {
 	t_list	*aux;
 
@@ -39,53 +42,42 @@ void	push_a(t_list	**stack_a , t_list	**stack_b)
 	
 	aux = *stack_b;
 	*stack_b = (*stack_b)->next;
-
 	aux->next = *stack_a;
 	*stack_a = aux;
+
+	if ((*stack_a)->next)
+		(*stack_a)->index = (*stack_a)->next->index + 1;
+	else
+		(*stack_a)->index = 0;
 }
 
-//Move poiner to head too
-
-void	push_b(t_list	**stack_a , t_list	**stack_b)
-{
-	t_list	*aux;
-
-	if (*stack_a == NULL)
-
-		return ;
-	
-	aux = *stack_a;
-	*stack_a = (*stack_a)->next;
-
-	aux->next = *stack_b;
-	*stack_b = aux;
-}
-
-void	rotate_a(t_list **stack_a)
+void	ra(t_list **stack_a)
 {
 	t_list	*last;
 	t_list	*prev;
+	int		aux;
 
 	if (*stack_a == NULL || (*stack_a)->next == NULL)
 		return ;
 	
 	last = *stack_a;
+	aux = last->index;
 	prev = NULL;
 
 	while (last->next)
 	{
 		prev = last;
+		last->index = last->index - 1;
 		last = last->next;
 	}
 		
 	last->next = *stack_a;
 	*stack_a = last;
+	(*stack_a)->index = aux;
 	prev->next = NULL;
 }
 
-// void	rotate_b(t_list stack)
-
-void	reverse_rotate_a(t_list **stack_a)
+void	rra(t_list **stack_a)
 {
 	t_list	*aux;
 	t_list	*head;
@@ -98,10 +90,12 @@ void	reverse_rotate_a(t_list **stack_a)
 	*stack_a = aux->next;
 
 	while (aux->next)
+	{
 		aux = aux->next;
+		aux->index = aux->index + 1;
+	}
 
+	head->index = 0;
 	aux->next = head;
 	head->next = NULL;
 }
-
-// void	revere_rotate_b(t_list stack)

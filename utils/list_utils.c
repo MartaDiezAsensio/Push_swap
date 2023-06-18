@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 18:44:29 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/06/16 16:39:23 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/18 12:41:33 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,21 @@ void	print_list(t_list *stack)
 	}
 }
 
-//mabe We won't need this either
-t_list	*get_i_node(t_list	*stack, int target)
+void	swap_stack(t_list **stack_a, t_list **stack_b, int lst_len)
 {
 	int	i;
 
 	i = 0;
-	while (stack != NULL)
-	{	
-		if (i++ == target)
-			return (stack);
-		stack = stack->next;
-	}
-	return (NULL);
+	while (i++ < lst_len)
+		pa(stack_a, stack_b);
+}
+
+int	ft_check_args(int argc, char **argv)
+{
+
+}
+
+void	free_stack(t_list **stack_a)
+{
+
 }
