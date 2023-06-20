@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 18:17:25 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/06/18 13:18:42 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/20 07:45:14 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	main(int argc, char **argv)
 	t_list	**stack_a;
 	t_list	**stack_b;
 
+	//trivial case argc == 2 to be dismissed?
 	if (argc < 2)
 		return (1);
 	
