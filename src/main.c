@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 18:17:25 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/06/20 07:45:14 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/22 14:53:22 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,13 @@ int	main(int argc, char **argv)
 
 	while (*stack_a)
 		stack_sort(stack_a, stack_b);
-
+	
 	swap_stack(stack_a, stack_b, ft_lstlen(*stack_b));
 
-	// printf("\n");
-	// print_list(*stack_a);
-	// printf("\n");
-	// print_list(*stack_b);
+	printf("\n");
+	print_list(*stack_a);
+	printf("\n");
+	print_list(*stack_b);
 
 	if (is_sorted(stack_a))
 	{

@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 12:24:20 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/06/20 07:46:39 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/22 14:56:35 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,12 @@
 
 void	sort_opt(t_list *min, t_list **stack_a, t_list **stack_b, int lst_len)
 {
-	if (min->index == lst_len)
-	{
-		pa(stack_b, stack_a);
-		printf("%s", "pb\n");
-	}
-	else if (min->index == lst_len - 1)
+	if (min->index == lst_len - 1)
 	{
 		rra(stack_a);
 		printf("%s", "rra\n");
-		pa(stack_b, stack_a);
-		printf("%s", "pb\n");
+		// pa(stack_b, stack_a);
+		// printf("%s", "pb\n");
 	}
 	else
 	{
@@ -44,8 +39,6 @@ void	stack_sort(t_list **stack_a, t_list **stack_b)
 	t_list	*aux_a;
 	int		lst_len;
 
-	(void)stack_b;
-
 	lst_len = ft_lstlen(*stack_a) - 1;
 	min = *stack_a;
 	aux_a = *stack_a;
@@ -60,11 +53,14 @@ void	stack_sort(t_list **stack_a, t_list **stack_b)
 
 int	is_sorted(t_list **stack_a)
 {
-	while ((*stack_a)->next)
+	t_list	*aux;
+
+	aux = *stack_a;
+	while (aux->next)
 	{
-		if ((*stack_a)->data > (*stack_a)->next->data)
+		if (aux->data > aux->next->data)
 			return (0);
-		(*stack_a) = (*stack_a)->next;
+		aux = aux->next;
 	}
 	return (1);
 }
