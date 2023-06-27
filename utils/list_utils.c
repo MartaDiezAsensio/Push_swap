@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 18:44:29 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/06/18 13:38:19 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/27 18:57:07 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,3 +79,5 @@ void	free_stack(t_list **stack_a)
 	}
 	free(stack_a);
 }
+
+//Change in file
