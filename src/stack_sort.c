@@ -6,39 +6,39 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 12:24:20 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/06/24 19:52:26 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/29 11:39:28 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
 //revise
-void	sort_triv(t_list *min, t_list **stack_a, t_list **stack_b, int lst_len)
-{
-	if ( lst_len == 2)
-	{
-		if (min->index == lst_len)
-			rra(stack_a);
-	}
-	else if (lst_len == 3)
-	{
-		if (min->index == lst_len)
-		{
-			if (min->next->index == lst_len - 1)
-				rra(stack_a);
-		}
-		else if (min->index == lst_len -1)
-		{
-			rra(stack_a);
-		}
-		else
-		{
-			rra(stack_a);
-			rra(stack_a);
-		}
+// void	sort_triv(t_list *min, t_list **stack_a, t_list **stack_b, int lst_len)
+// {
+// 	if ( lst_len == 2)
+// 	{
+// 		if (min->index == lst_len)
+// 			rra(stack_a);
+// 	}
+// 	else if (lst_len == 3)
+// 	{
+// 		if (min->index == lst_len)
+// 		{
+// 			if (min->next->index == lst_len - 1)
+// 				rra(stack_a);
+// 		}
+// 		else if (min->index == lst_len -1)
+// 		{
+// 			rra(stack_a);
+// 		}
+// 		else
+// 		{
+// 			rra(stack_a);
+// 			rra(stack_a);
+// 		}
 
-	}
-}
+// 	}
+// }
 
 void	sort_opt(t_list *min, t_list **stack_a, t_list **stack_b, int lst_len)
 {

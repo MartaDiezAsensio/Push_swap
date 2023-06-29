@@ -6,7 +6,7 @@
 /*   By: mdiez-as <mdiez-as@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/10 15:15:15 by mdiez-as          #+#    #+#             */
-/*   Updated: 2023/06/18 12:42:07 by mdiez-as         ###   ########.fr       */
+/*   Updated: 2023/06/29 11:40:42 by mdiez-as         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int		ft_lstlen(t_list *lst);
 void	swap_stack(t_list **stack_a, t_list **stack_b, int lst_len);
 int		ft_check_args(int argc, char **argv);
 void	free_stack(t_list **stack_a);
+t_list	*ft_last(t_list *lst);
 
 //Create stack
 t_list	*new_node(int value, int index);
@@ -39,10 +40,22 @@ void	insert_node(t_list	**top, int value, int index);
 t_list	*create_stack(int argc, char **argv, t_list **stack);
 
 //Operations
-void	sa(t_list	**stack_a);
-void	pa(t_list	**stack_a , t_list	**stack_b);
-void	ra(t_list **stack_a);
-void	rra(t_list **stack_a);
+int		swap(t_list **stack);
+int		push(t_list **stack_to, t_list **stack_from);
+int		rotate(t_list **stack);
+int		reverseRotate(t_list **stack);
+
+int		sa(t_list **stack_a);
+int		sb(t_list **stack_b);
+int		ss(t_list **stack_a, t_list **stack_b);
+int		pa(t_list **stack_a, t_list **stack_b);
+int		pb(t_list **stack_b, t_list **stack_a);
+int		ra(t_list **stack_a);
+int		rb(t_list **stack_b);
+int		rr(t_list **stack_a, t_list **stack_b);
+int		rra(t_list **stack_a);
+int		rrb(t_list **stack_b);
+int		rrr(t_list **stack_a, t_list **stack_b);
 
 //Soting
 void	stack_sort(t_list **stack_a, t_list **stack_b);
